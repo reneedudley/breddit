@@ -11,13 +11,20 @@ class Comments extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\Comments');
+        return $this->belongsTo('App\User');
     }
     /**
      * Get the post it belongs to .
      */
     public function subreddits()
     {
-        return $this->belongsTo('App\Posts');
+        return $this->belongsTo('App\Post');
+    }
+    /**
+     * Get the parent comment for the comment .
+     */
+    public function parentComment()
+    {
+        return $this->belongsTo('App\Comment');
     }
 }

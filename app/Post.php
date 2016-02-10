@@ -11,7 +11,7 @@ class Post extends Model
      */
     public function comments()
     {
-        return $this->hasMany('App\Comments');
+        return $this->hasMany('App\Comment');
     }
     /**
      * Get the user the post belongs to .
@@ -25,6 +25,6 @@ class Post extends Model
      */
     public function subreddits()
     {
-        return $this->belongsTo('App\Subbreddits');
+        return $this->belongsTo('App\Subbreddit');
     }
 }
